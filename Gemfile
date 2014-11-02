@@ -44,4 +44,5 @@ end
 group :production do
   gem 'pg'
   gem 'aws-sdk'
+  gem 'rails_12factor'
 end
