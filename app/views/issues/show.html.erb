@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= image_tag @issue.photo.url %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @issue.description %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @issue.location %>
+</p>
+
+<%= link_to 'Back', '/list' %>
