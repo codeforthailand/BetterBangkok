@@ -14,4 +14,9 @@
   <%= @issue.location %>(<%= @issue.lat %>,<%= @issue.long %>)
 </p>
 
-<%= link_to 'Back', '/list' %>
+
+<% if session[:is_logged_in] %>
+    <%= link_to 'Back', '/issues' %>
+<% else %>
+    <%= link_to 'Back', '/list' %>
+<% end %>

@@ -1,6 +1,6 @@
 class IssuesController < ApplicationController
+  before_action :authenticate, except: [ :show ]
   before_action :set_issue, only: [:show, :edit, :update, :destroy]
-  http_basic_authenticate_with name: "admin", password: Rails.configuration.admin_password, except: [ :show ]
 
   # GET /issues
   # GET /issues.json
