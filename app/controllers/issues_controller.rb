@@ -15,19 +15,16 @@ class IssuesController < ApplicationController
 
   # GET /issues/new
   def new
-    # TODO: authentication
     @issue = Issue.new
   end
 
   # GET /issues/1/edit
   def edit
-    # TODO: authentication
   end
 
   # POST /issues
   # POST /issues.json
   def create
-    # TODO: authentication
     @issue = Issue.new(issue_params)
 
     respond_to do |format|
@@ -44,7 +41,6 @@ class IssuesController < ApplicationController
   # PATCH/PUT /issues/1
   # PATCH/PUT /issues/1.json
   def update
-    # TODO: authentication
     respond_to do |format|
       if @issue.update(issue_params)
         format.html { redirect_to @issue, notice: 'Issue was successfully updated.' }
@@ -59,7 +55,6 @@ class IssuesController < ApplicationController
   # DELETE /issues/1
   # DELETE /issues/1.json
   def destroy
-    # TODO: authentication
     @issue.destroy
     respond_to do |format|
       format.html { redirect_to issues_url, notice: 'Issue was successfully destroyed.' }
@@ -75,6 +70,6 @@ class IssuesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def issue_params
-      params.require(:issue).permit(:description, :location, :posted_date, :photo)
+      params.require(:issue).permit(:description, :location, :posted_date, :photo, :lat, :long)
     end
 end

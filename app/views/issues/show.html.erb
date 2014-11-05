@@ -11,7 +11,7 @@
 
 <p>
   <strong>Location:</strong>
-  <%= @issue.location %>
+  <%= @issue.location %>(<%= @issue.lat %>,<%= @issue.long %>)
 </p>
 
 <%= link_to 'Back', '/list' %>
