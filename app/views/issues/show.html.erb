@@ -1,27 +1,27 @@
-<p id="notice"><%= notice %></p>
-<% if session[:is_logged_in] %>
-    <%= link_to 'Back', '/issues' %>
-<% end %>
+<div class="pure-u-1">
+    <p id="notice"><%= notice %></p>
+    <% if session[:is_logged_in] %>
+        <%= link_to 'Back', '/issues' %>
+    <% end %>
+</div>
 
-<div class="content pure-g">
-    <div class="pure-u-3-5">
-        <%= image_tag(
-                @issue.photo.url(:medium),
-                :class=> "issue__thumbnail"
-            )
-        %>
-    </div>
-    <div class="pure-u-2-5 box--padding issue__content">
-        <p>
-            <span>
-                <a href="https://www.google.co.th/maps/?q=<%= @issue.lat %>,<%= @issue.long %>">
-                    <i class="fa fa-map-marker"></i>
-                    <%= @issue.location %>
-                </a>
-            </span>
-        </p>
-        <p>
-            <%= @issue.description %>
-        </p>
-    </div>
+<div class="pure-u-3-5">
+    <%= image_tag(
+            @issue.photo.url(:medium),
+            :class=> "issue__thumbnail"
+        )
+    %>
+</div>
+<div class="pure-u-2-5 box--padding issue__content">
+    <p>
+        <span>
+            <a href="https://www.google.co.th/maps/?q=<%= @issue.lat %>,<%= @issue.long %>">
+                <i class="fa fa-map-marker"></i>
+                <%= @issue.location %>
+            </a>
+        </span>
+    </p>
+    <p>
+        <%= @issue.description %>
+    </p>
 </div>
