@@ -1,22 +1,24 @@
-<h1>Listing issues</h1>
+<div class="pure-u-1">
+    <h1>Listing issues</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Description</th>
-      <th>Location</th>
-    </tr>
-  </thead>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Description</th>
+          <th>Location</th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @issues.each do |issue| %>
-      <tr>
-        <td><%= link_to 'Show', issue %></td>
-        <td><%= issue.description %></td>
-        <td><%= issue.location %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<br>
+      <tbody>
+        <% @issues.each do |issue| %>
+          <tr>
+            <td><%= link_to 'Show', issue %></td>
+            <td><%= issue.description %></td>
+            <td><%= issue.location %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <br>
+</div>
